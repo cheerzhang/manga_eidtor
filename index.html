@@ -1,22 +1,52 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>漫画编辑器 - 高清版</title>
   <style>
-    body { margin: 0; text-align: center; font-family: sans-serif; }
-    canvas { border: 1px solid #ccc; margin-top: 20px; }
-    #controls { margin-top: 10px; }
+    :root {
+      --zoom: 0.5;
+    }
+    body {
+      margin: 0;
+      text-align: center;
+      font-family: sans-serif;
+    }
+    #canvas-wrapper {
+      width: 100%;
+      margin: 0 auto;
+      transform: scale(var(--zoom));
+      transform-origin: top left;
+    }
+    canvas {
+      display: block;
+    }
+    #controls {
+      margin: 10px;
+    }
   </style>
 </head>
 <body>
   <h2>漫画编辑器（2480×3508）</h2>
-  <canvas id="canvas" width="2480" height="3508"></canvas>
+
   <div id="controls">
     <button onclick="exportImage()">导出漫画</button>
-    <p>点击左上格子上传图片，拖动/缩放后点击空白处确认</p>
+    <label style="margin-left: 20px;">
+      缩放：
+      <input type="range" id="zoomSlider" min="0.2" max="1" step="0.05" value="0.5">
+    </label>
   </div>
+
+  <div id="canvas-wrapper">
+    <canvas id="canvas" width="2480" height="3508"></canvas>
+  </div>
+
   <script src="editor.js"></script>
+  <script>
+    const zoomSlider = document.getElementById("zoomSlider");
+    zoomSlider.addEventListener("input", () => {
+      document.documentElement.style.setProperty('--zoom', zoomSlider.value);
+    });
+  </script>
 </body>
 </html>
