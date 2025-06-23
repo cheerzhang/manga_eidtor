@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>漫画编辑器</title>
+  <title>Manga Editor</title>
   <style>
     :root { --zoom: 0.5; }
     body { margin: 0; text-align: center; font-family: sans-serif; }
@@ -13,12 +13,12 @@
   </style>
 </head>
 <body>
-  <h2>漫画编辑器</h2>
-  <p id="templateLabel" style="font-size: 16px; color: gray;">3号模板</p>
+  <h2>Manga Editor</h2>
+  <p id="templateLabel" style="font-size: 16px; color: gray;">Template 3</p>
   <div id="controls">
-    <button onclick="exportImage()">导出漫画</button>
+    <button onclick="exportImage()">Download the current page</button>
     <label style="margin-left: 20px;">
-      缩放：<input type="range" id="zoomSlider" min="0.2" max="1" step="0.05" value="0.5">
+      Zoom:<input type="range" id="zoomSlider" min="0.2" max="1" step="0.05" value="0.5">
     </label>
   </div>
   <div id="canvas-wrapper">
