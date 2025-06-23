@@ -8,7 +8,7 @@ bg.src = 'comic_frame_transparent_2.png';
 const panels = [
   {
     name: "panel1",
-    polygon: [ {x:90, y:90}, {x:380, y:90}, {x:380, y:90}, {x:90, y:700} ],
+    polygon: [ {x:130, y:140}, {x:848, y:140}, {x:848, y:1480}, {x:130, y:1608} ],
     image: null, offsetX: 0, offsetY: 0, scale: 1
   },
   {
