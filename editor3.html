@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>漫画编辑器</title>
+  <style>
+    :root { --zoom: 0.5; }
+    body { margin: 0; text-align: center; font-family: sans-serif; }
+    #canvas-wrapper { margin: 0 auto; transform: scale(var(--zoom)); transform-origin: top left; }
+    canvas { display: block; }
+    #controls { margin: 10px; }
+  </style>
+</head>
+<body>
+  <h2>漫画编辑器</h2>
+  <p id="templateLabel" style="font-size: 16px; color: gray;">3号模板</p>
+  <div id="controls">
+    <button onclick="exportImage()">导出漫画</button>
+    <label style="margin-left: 20px;">
+      缩放：<input type="range" id="zoomSlider" min="0.2" max="1" step="0.05" value="0.5">
+    </label>
+  </div>
+  <div id="canvas-wrapper">
+    <canvas id="canvas" width="2480" height="3508"></canvas>
+  </div>
+  <script src="templates/frame3/editor.js"></script>
+</body>
+</html>

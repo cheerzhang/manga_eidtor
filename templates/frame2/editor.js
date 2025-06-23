@@ -1,9 +1,14 @@
 
+
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 const bg = new Image();
-bg.src = 'comic_frame_transparent_2.png';
+bg.src = 'templates/frame2/frame.png';
+
+document.getElementById("zoomSlider").addEventListener("input", function(e) {
+  document.documentElement.style.setProperty("--zoom", e.target.value);
+});
 
 const panels = [
   {
