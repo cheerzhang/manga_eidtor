@@ -3,12 +3,12 @@ const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 const bg = new Image();
-bg.src = 'comic_frame_transparent_2_resized.png';
+bg.src = 'comic_frame_transparent_2.png';
 
 const panels = [
   {
     name: "panel1",
-    polygon: [ {x:180, y:180}, {x:760, y:180}, {x:760, y:1400}, {x:180, y:1400} ],
+    polygon: [ {x:90, y:90}, {x:380, y:90}, {x:380, y:90}, {x:90, y:700} ],
     image: null, offsetX: 0, offsetY: 0, scale: 1
   },
   {
