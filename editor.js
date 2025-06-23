@@ -8,22 +8,22 @@ bg.src = 'comic_frame_transparent_2.png';
 const panels = [
   {
     name: "panel1",
-    polygon: [ {x:130, y:140}, {x:848, y:140}, {x:848, y:1480}, {x:130, y:1608} ],
+    polygon: [ {x:130, y:142}, {x:848, y:142}, {x:848, y:1480}, {x:130, y:1608} ],
     image: null, offsetX: 0, offsetY: 0, scale: 1
   },
   {
     name: "panel2",
-    polygon: [ {x:860, y:180}, {x:1440, y:180}, {x:1440, y:1400}, {x:860, y:1400} ],
+    polygon: [ {x:960, y:142}, {x:1606, y:142}, {x:1606, y:1350}, {x:960, y:1458} ],
     image: null, offsetX: 0, offsetY: 0, scale: 1
   },
   {
     name: "panel3",
-    polygon: [ {x:1540, y:180}, {x:2120, y:180}, {x:2120, y:1400}, {x:1540, y:1400} ],
+    polygon: [ {x:1700, y:142}, {x:2348, y:142}, {x:2348, y:1220}, {x:1700, y:1332} ],
     image: null, offsetX: 0, offsetY: 0, scale: 1
   },
   {
     name: "panel4",
-    polygon: [ {x:180, y:1500}, {x:1100, y:1450}, {x:960, y:2100}, {x:180, y:2100} ],
+    polygon: [ {x:1800, y:1500}, {x:1100, y:1450}, {x:960, y:2100}, {x:180, y:2100} ],
     image: null, offsetX: 0, offsetY: 0, scale: 1
   },
   {
