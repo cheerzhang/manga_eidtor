@@ -23,17 +23,17 @@ const panels = [
   },
   {
     name: "panel4",
-    polygon: [ {x:1800, y:1500}, {x:1100, y:1450}, {x:960, y:2100}, {x:180, y:2100} ],
+    polygon: [ {x:130, y:1773}, {x:870, y:1648}, {x:1180, y:2473}, {x:130, y:2473} ],
     image: null, offsetX: 0, offsetY: 0, scale: 1
   },
   {
     name: "panel5",
-    polygon: [ {x:1100, y:1450}, {x:2300, y:1500}, {x:2300, y:2100}, {x:960, y:2100} ],
+    polygon: [ {x:980, y:1630}, {x:2348, y:1394}, {x:2348, y:2473}, {x:1296, y:2473} ],
     image: null, offsetX: 0, offsetY: 0, scale: 1
   },
   {
     name: "panel6",
-    polygon: [ {x:180, y:2300}, {x:2300, y:2300}, {x:2300, y:2700}, {x:180, y:2700} ],
+    polygon: [ {x:130, y:2600}, {x:2348, y:2600}, {x:2348, y:3366}, {x:130, y:3366} ],
     image: null, offsetX: 0, offsetY: 0, scale: 1
   }
 ];
