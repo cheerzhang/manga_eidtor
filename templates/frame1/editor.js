@@ -155,23 +155,9 @@ canvas.addEventListener('click', (e) => {
 });
 
 function exportImage() {
-  // crearte a new canvas
-  const exportCanvas = document.createElement('canvas');
-  exportCanvas.width = canvas.width;
-  exportCanvas.height = canvas.height;
-  const exportCtx = exportCanvas.getContext('2d');
-
-  // Step 1: set bg color）
-  exportCtx.fillStyle = '#424242';  // change here
-  exportCtx.fillRect(0, 0, exportCanvas.width, exportCanvas.height);
-
-  // Step 2: put the images on
-  exportCtx.drawImage(canvas, 0, 0);
-
-  // Step 3: generate and download
   const link = document.createElement('a');
   link.download = 'my_comic_page_hd.png';
-  link.href = exportCanvas.toDataURL();
+  link.href = canvas.toDataURL();
   link.click();
 }
 
