@@ -47,9 +47,15 @@ let currentPanel = null;
 let dragging = false;
 let lastX, lastY;
 
-function draw() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.drawImage(bg, 0, 0, canvas.width, canvas.height);
+function draw(includeFrame = true) {
+  // bg color
+  ctx.fillStyle = '#424242';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  // border
+  if (includeFrame && bg.complete) {
+    ctx.drawImage(bg, 0, 0, canvas.width, canvas.height);
+  }
 
   panels.forEach(panel => {
     if (panel.image) {
@@ -67,7 +73,7 @@ function draw() {
       ctx.restore();
     }
 
-    // 可视化边框
+    // frame
     ctx.beginPath();
     ctx.moveTo(panel.polygon[0].x, panel.polygon[0].y);
     for (let i = 1; i < panel.polygon.length; i++) {
