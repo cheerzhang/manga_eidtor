@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Manga Editor</title>
+  <style>
+    :root { --zoom: 0.5; }
+    body { margin: 0; text-align: center; font-family: sans-serif; }
+    #canvas-wrapper { margin: 0 auto; transform: scale(var(--zoom)); transform-origin: top left; }
+    canvas { display: block; }
+    #controls { margin: 10px; }
+  </style>
+</head>
+<body>
+  <h2>Manga Editor</h2>
+  <p id="templateLabel" style="font-size: 16px; color: gray;">Template 04</p>
+  <div id="controls">
+    <button onclick="exportImage()">Download the current page</button>
+    <label style="margin-left: 20px;">
+      Zoom:<input type="range" id="zoomSlider" min="0.2" max="1" step="0.05" value="0.5">
+    </label>
+  </div>
+  <div id="canvas-wrapper">
+    <canvas id="canvas" width="2480" height="3508"></canvas>
+  </div>
+  <script src="templates/frame4/editor.js"></script>
+</body>
+</html>
